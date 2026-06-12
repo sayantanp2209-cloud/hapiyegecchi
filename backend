@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PREVIEW — Reception Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#F4F7F9;color:#2C3E50}
+.banner{background:#FEF3C7;color:#92400E;text-align:center;padding:10px;font-size:.85rem;font-weight:600}
+.shell{display:flex;min-height:100vh}
+.sb{width:240px;background:#1E2D3D;color:rgba(255,255,255,.65);flex-shrink:0;display:flex;flex-direction:column}
+.sb-logo{padding:20px 16px;border-bottom:1px solid rgba(255,255,255,.08);color:#fff;font-weight:700;display:flex;gap:10px;align-items:center}
+.sb a{display:flex;gap:11px;padding:11px 14px;margin:2px 10px;border-radius:9px;color:rgba(255,255,255,.62);text-decoration:none;font-size:.88rem;font-weight:500}
+.sb a.on{background:#1A8FA0;color:#fff}
+.sb a:hover{background:rgba(255,255,255,.08);color:#fff}
+.main{flex:1}
+.top{background:#fff;border-bottom:1px solid #E2EDF0;padding:16px 28px;display:flex;justify-content:space-between;align-items:center;font-weight:700;color:#1E2D3D}
+.top span{font-weight:400;font-size:.84rem;color:#6B7B8D}
+.pg{padding:28px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:24px}
+.stat{background:#fff;border-radius:12px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,.06);display:flex;gap:14px;align-items:center}
+.si{width:48px;height:48px;border-radius:12px;background:#E8F7FA;display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+.sn{font-size:1.7rem;font-weight:700;color:#1E2D3D;line-height:1}
+.sl{font-size:.78rem;color:#6B7B8D;margin-top:2px}
+.hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.hdr h2{font-size:1.15rem;color:#1E2D3D}
+.hdr p{font-size:.84rem;color:#6B7B8D}
+.btn{background:#1A8FA0;color:#fff;border:none;padding:10px 18px;border-radius:8px;font-family:inherit;font-weight:600;font-size:.88rem;cursor:pointer}
+.card{background:#fff;border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}
+table{width:100%;border-collapse:collapse}
+th{text-align:left;padding:10px 14px;font-size:.74rem;font-weight:700;color:#6B7B8D;text-transform:uppercase;background:#F0FAFB;border-bottom:1px solid #E2EDF0}
+td{padding:13px 14px;font-size:.88rem;border-bottom:1px solid #F0F3F5}
+tr:hover{background:#F0FAFB}
+.time{font-weight:700;color:#1A8FA0;white-space:nowrap}
+.b{display:inline-block;padding:3px 10px;border-radius:50px;font-size:.72rem;font-weight:700;text-transform:uppercase}
+.bp{background:#FEF3C7;color:#92400E}.bc{background:#DCFCE7;color:#166534}.bd{background:#DBEAFE;color:#1E40AF}
+.act{display:flex;gap:5px}
+.bs{padding:6px 12px;border-radius:7px;border:none;font-family:inherit;font-weight:600;font-size:.78rem;cursor:pointer}
+.bg{background:#DCFCE7;color:#166534}.bb{background:#E8F7FA;color:#1A8FA0}.bgh{background:transparent;color:#6B7B8D}.br{background:#FEE2E2;color:#991B1B}
+.src{font-size:.75rem;color:#6B7B8D}
+@media(max-width:800px){.sb{display:none}}
+</style>
+</head>
+<body>
+<div class="banner">⚠️ THIS IS A PREVIEW with sample data — your real dashboard will work exactly like this after deployment</div>
+<div class="shell">
+  <aside class="sb">
+    <div class="sb-logo">🦷 <div>Reception<div style="font-size:.68rem;opacity:.45;font-weight:400">BrightSmile Dental</div></div></div>
+    <nav style="padding-top:14px">
+      <a class="on" href="#">📅 Today's Appointments</a>
+      <a href="#">🗓️ Upcoming</a>
+      <a href="#">👤 Patients</a>
+      <a href="#">📋 Prescriptions</a>
+      <a href="#">🔔 Send Reminder</a>
+    </nav>
+  </aside>
+  <main class="main">
+    <div class="top">Reception Dashboard <span>Friday, 12 June 2026</span></div>
+    <div class="pg">
+      <div class="stats">
+        <div class="stat"><div class="si">📅</div><div><div class="sn">6</div><div class="sl">Total Today</div></div></div>
+        <div class="stat"><div class="si" style="background:#FEF3C7">⏳</div><div><div class="sn">2</div><div class="sl">Pending</div></div></div>
+        <div class="stat"><div class="si" style="background:#DCFCE7">✅</div><div><div class="sn">3</div><div class="sl">Confirmed</div></div></div>
+        <div class="stat"><div class="si" style="background:#DBEAFE">🏁</div><div><div class="sn">1</div><div class="sl">Completed</div></div></div>
+      </div>
+      <div class="hdr">
+        <div><h2>Today — Friday, 12 June 2026</h2><p>6 appointments scheduled</p></div>
+        <button class="btn">+ Add Appointment</button>
+      </div>
+      <div class="card">
+        <table>
+          <thead><tr><th>Time</th><th>Patient</th><th>Phone</th><th>Treatment</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr><td class="time">09:00</td><td><b>Amit Saha</b></td><td style="color:#1A8FA0">+91 90073 21456</td><td>Dental Cleaning</td><td><span class="b bd">completed</span></td><td class="act"><button class="bs bgh">Edit</button></td></tr>
+            <tr><td class="time">10:00</td><td><b>Priya Banerjee</b></td><td style="color:#1A8FA0">+91 98301 45678</td><td>Root Canal Treatment</td><td><span class="b bc">confirmed</span></td><td class="act"><button class="bs bb">Done</button><button class="bs bgh">Edit</button><button class="bs br">Cancel</button></td></tr>
+            <tr><td class="time">11:00</td><td><b>Rahul Das</b> <span class="src">🌐 Website</span></td><td style="color:#1A8FA0">+91 89102 33445</td><td>Tooth Extraction</td><td><span class="b bp">pending</span></td><td class="act"><button class="bs bg">Confirm</button><button class="bs bgh">Edit</button><button class="bs br">Cancel</button></td></tr>
+            <tr><td class="time">14:00</td><td><b>Sunita Devi</b></td><td style="color:#1A8FA0">+91 70444 56789</td><td>Pediatric Dentistry</td><td><span class="b bc">confirmed</span></td><td class="act"><button class="bs bb">Done</button><button class="bs bgh">Edit</button><button class="bs br">Cancel</button></td></tr>
+            <tr><td class="time">15:30</td><td><b>Mohammed Iqbal</b> <span class="src">🌐 Website</span></td><td style="color:#1A8FA0">+91 96741 22334</td><td>Dental Implants</td><td><span class="b bp">pending</span></td><td class="act"><button class="bs bg">Confirm</button><button class="bs bgh">Edit</button><button class="bs br">Cancel</button></td></tr>
+            <tr><td class="time">17:00</td><td><b>Ananya Roy</b></td><td style="color:#1A8FA0">+91 80174 99887</td><td>Orthodontics / Braces</td><td><span class="b bc">confirmed</span></td><td class="act"><button class="bs bb">Done</button><button class="bs bgh">Edit</button><button class="bs br">Cancel</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
